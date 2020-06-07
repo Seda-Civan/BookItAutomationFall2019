@@ -7,7 +7,7 @@ Feature: Create student
     And user accepts content type as "application/json"
     When user sends POST request to "/api/students/student" with following information:
       | first-name | last-name | email                  | password | role                | campus-location | batch-number | team-name      |
-      | Lesly      | McDonald  | whoisfromb15@email.com | 1111     | student-team-member | VA              | 15           | Online_Hackers |
+      | studenta   | McDonald  | whoisfromb15@email.com | 1111     | student-team-member | VA              | 15           | Online_Hackers |
     And user verifies that response status code is 403
 #    team member not allowed to create student, so response status code is 403
 
@@ -17,7 +17,7 @@ Feature: Create student
     And user accepts content type as "application/json"
     When user sends POST request to "/api/students/student" with following information:
       | first-name | last-name | email                  | password | role                | campus-location | batch-number | team-name      |
-      | Lesly      | SDET      | whoisfromb15@email.com | 1111     | student-team-member | VA              | 15           | Online_Hackers |
+      | studenta   | SDET      | whoisfromb15@email.com | 1111     | student-team-member | VA              | 15           | Online_Hackers |
     And user verifies that response status code is 201
 #    Then user deletes previously added students
 #      | first-name | last-name | email                  | password | role                | campus-location | batch-number | team-name      |
